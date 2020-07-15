@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Space+Mono:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono";
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #ffffff;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-gap: 4em;
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 58px;
+  padding: 0 0 0 1em;
+  font-weight: bold;
+  display: flex;
+  font-size: 1.25em;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Inconsolata";
+}
+
+.left {
+  position: relative;
+}
+
+.left .image-container {
+  height: 100%;
+  width: 75%;
+  background: url("scarecrow.png");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right .content-container {
+  width: 75%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.right .content-container h1 {
+  font-family: "Space Mono";
+  font-size: 4em;
+  word-spacing: 12px;
+  line-height: 1.25em;
+}
+
+.right .content-container p {
+  width: 75%;
+  font-family: "Space Mono";
+  font-size: 1.5em;
+}
+
+.right .content-container button {
+  height: 76px;
+  min-width: 220px;
+  outline: none;
+  border: none;
+  background: #333333;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 38px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: unset !important;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 38px;
+    grid-gap: 10px;
+  }
+
+  .top {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 38px;
+    padding: 0 0 0 1em;
+    font-weight: bold;
+    display: flex;
+    font-size: 1em;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Inconsolata";
+  }
+
+  .left {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .left .image-container {
+    height: 80%;
+    width: 100%;
+    background: url("scarecrow.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .right .content-container {
+    height: 100%;
+    width: 100vw;
+    padding: 1em 1em 48px 1em;
+    display: flex;
+    align-items: unset;
+    justify-content: space-around;
+  }
+
+  .right .content-container h1 {
+    font-family: "Space Mono";
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 1rem;
+  }
+
+  .right .content-container p {
+    width: 100%;
+    font-family: "Space Mono";
+    font-size: 1.25em;
+    margin-bottom: 1rem;
+  }
+
+  .right .content-container button {
+    height: 46px;
+    width: 180px;
+    outline: none;
+    border: none;
+    background: #333333;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .bottom {
+    width: 100vw;
+    height: 38px;
+    text-align: center;
+  }
+}
